@@ -1,0 +1,47 @@
+import numpy as np 
+import pandas as pd 
+
+import matplotlib.pyplot as plt  
+import seaborn as sns
+
+from scipy.stats import norm
+from sklearn.preprocessing import StandardScaler
+from scipy import stats
+from scipy.stats import norm, skew 
+
+%matplotlib inline
+color = sns.color_palette()
+sns.set_style('darkgrid')
+
+import warnings
+def ignore_warn(*args, **kwargs):
+    pass
+warnings.warn = ignore_warn #ignore annoying warning (from sklearn and seaborn)
+
+from IPython.core.interactiveshell import InteractiveShell
+InteractiveShell.ast_node_interactivity = "all"
+
+#learning new 
+import plotly.offline as pyo
+from plotly.graph_objs import *
+import plotly.graph_objs as go
+
+
+# Read the datasets
+
+business=pd.read_csv("yelp_business.csv")
+business_attributes=pd.read_csv("yelp_business_attributes.csv")
+business_hours=pd.read_csv("yelp_business_hours.csv")
+reviews=pd.read_csv("yelp_review.csv")
+check_in=pd.read_csv("yelp_checkin.csv")
+tip=pd.read_csv("yelp_tip.csv")
+user=pd.read_csv("yelp_user.csv")
+
+business.head(10)
+business_attributes.head(10)
+business_hours.head(10)
+reviews.head(10)
+check_in.head(10)
+tip.head(10)
+user.head(10)
+
